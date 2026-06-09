@@ -21,6 +21,10 @@ export function nextBounded(prng: () => number, avg: number, sd: number) {
 	return prng() * 2 * sd - sd + avg;
 }
 
+export function nextBoundedBy(prng: () => number, min: number, max: number) {
+	return prng() * (max - min) + min;
+}
+
 export function seedGen() {
 	return nextSeed(Math.random);
 }

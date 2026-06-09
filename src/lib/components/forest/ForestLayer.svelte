@@ -20,9 +20,9 @@
 			// Trunk Width
 			sizeAvg: number;
 			sizeSD: number;
-			// Trunk Height
-			height: number;
+			
 			inset: number;
+			lod?: boolean;
 		};
 	} & SVGAttributes<SVGGElement>;
 </script>
@@ -30,8 +30,7 @@
 <script lang="ts">
 	import { Bezier, type Point } from 'bezier-js';
 	import { flipOverPoint, linearGet, toSVG } from '../../util/point';
-	import { nextBounded, splitmix32 } from '$lib/util/prng';
-	import type { ForestTreeProps } from './ForestTree.svelte';
+	import { nextBounded, nextSeed, splitmix32 } from '$lib/util/prng';
 	import ForestTree from './ForestTree.svelte';
 
 	let { width, height, seed, ground, trees, ...props }: ForestLayerProps = $props();
@@ -82,7 +81,7 @@
 		if (!trees) return [];
 		const prng = splitmix32(seed);
 		const num = nextBounded(prng, trees.numAvg, trees.numSD);
-		let treeProps: ForestTreeProps[] = [];
+		let treeProps: { x: number, y: number, size: number, seed: number }[] = [];
 		for (let i = 0; i < num; i++) {
 			let t = (i + 1) / (num + 1);
 			let curve = groundCurves[Math.floor(t * groundCurves.length)];
@@ -95,14 +94,14 @@
 					x: width * t,
 					y: curve.get(curveT).y + trees.inset,
 					size: nextBounded(prng, trees.sizeAvg, trees.sizeSD),
-					height: trees.height
+					seed: nextSeed(prng)
 				});
 		}
 		return treeProps;
 	});
 </script>
 
-<g {...props}>
+<g stroke={props.fill} {...props}>
 	<path
 		d="M 0,{height} L 0,{ground.height} C {groundCurves
 			.flatMap((c) => c.points.slice(1, 4))
@@ -123,7 +122,7 @@
         {/each}
     {/each} -->
 
-	{#each treeProps as t (t)}
-		<ForestTree {...t} />
+	{#each treeProps as tProps (tProps)}
+		<ForestTree {...tProps} height={tProps.size * 10} trunk={tProps.size + trees!.inset} lod={trees?.lod} />
 	{/each}
 </g>
