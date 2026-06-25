@@ -1,2 +1,9 @@
-<h1>Welcome to SvelteKit</h1>
-<p>Visit <a href="https://svelte.dev/docs/kit">svelte.dev/docs/kit</a> to read the documentation</p>
+<script>
+  import SvelteSeo from "svelte-seo";
+</script>
+
+<SvelteSeo
+  title="Home | Tyler Place"
+/>
+
+<h1>Tyler Place</h1>
