@@ -1,8 +1,2 @@
-<script lang="ts">
-	import ForestContainer from '$lib/components/forest/ForestContainer.svelte';
-	import type { PageProps } from './$types';
-
-	const { data }: PageProps = $props();
-</script>
-
-<ForestContainer seed={data.seed} />
+<h1>Welcome to SvelteKit</h1>
+<p>Visit <a href="https://svelte.dev/docs/kit">svelte.dev/docs/kit</a> to read the documentation</p>
