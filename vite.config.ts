@@ -14,9 +14,9 @@ export default defineConfig({
 		imagetools({
 			defaultDirectives: (url) => {
 				if (url.searchParams.has("hero-desktop")) {
-					return new URLSearchParams("aspect=16:9&w=640;750;828;1080;1200;1920;2048;3840&withoutEnlargement&format=avif;webp;jpg")
+					return new URLSearchParams("aspect=16:9&w=640;750;828;1080;1200;1920;2048;3840&fit=cover&position=center&format=avif;webp;jpg")
 				} else if (url.searchParams.has("hero-mobile")) {
-					return new URLSearchParams("aspect=9:16&w=640;750;828;1080;1280&withoutEnlargement&format=avif;webp;jpg")
+					return new URLSearchParams("aspect=9:16&w=640;750;828;1080;1280&fit=cover&position=center&format=avif;webp;jpg")
 				}
 
 				return new URLSearchParams();

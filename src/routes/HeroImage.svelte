@@ -17,13 +17,11 @@
 	{/each}
 	<img
 		src={desktop.img.src}
-		width={desktop.img.w}
-		height={desktop.img.h}
 		alt="snow covered rainier mountain during daytime"
 		style:background-image="url('{lqip.lqip}')"
 		style:background-size="cover"
 		style:font-size="0"
 		{...props}
-		class={cn('aspect-9/16 sm:aspect-video object-cover', props.class)}
+		class={cn('aspect-9/16 sm:aspect-video object-cover object-center', props.class)}
 	/>
 </picture>

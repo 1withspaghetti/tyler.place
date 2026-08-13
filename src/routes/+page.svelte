@@ -1,6 +1,8 @@
 <script>
     import SvelteSeo from "svelte-seo";
 	import HeroImage from "./HeroImage.svelte";
+    import mask_desktop from "$lib/assets/imgs/mountain_mask_desktop.png?format=webp&inline"
+    import mask_mobile from "$lib/assets/imgs/mountain_mask_mobile.png?format=webp&inline"
 </script>
 
 <SvelteSeo
@@ -12,9 +14,10 @@
         <HeroImage
             class="w-full"
         />
-        <div class="absolute top-1/3 sm:top-1/4 -translate-y-1/2 text-center w-full">
-            <h1 class="font-heading text-6xl sm:text-7xl lg:text-8xl font-bold text-white">Tyler Place</h1>
-            <p class="mt-1 text-lg lg:text-2xl font-bold text-white">1st year Software Engineer @ CalPoly</p>
+        <div class="absolute top-0 left-0 w-full h-full mask-center mask-cover mask-(--mask-mobile) sm:mask-(--mask-desktop)" style:--mask-desktop="url('{mask_desktop}')" style:--mask-mobile="url('{mask_mobile}')">
+            <div class="absolute bottom-[58%] text-center w-full">
+                <h1 class="font-heading text-6xl sm:text-7xl lg:text-8xl xl:text-9xl font-bold text-white">Tyler Place</h1>
+            </div>
         </div>
     </section>
 </main>
