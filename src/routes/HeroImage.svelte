@@ -1,6 +1,6 @@
 <script lang="ts">
-	import desktop from '$lib/assets/imgs/caleb-riston-TXiBwX0kg-Q-unsplash.jpg?hero-desktop&as=picture';
-	import mobile from '$lib/assets/imgs/caleb-riston-TXiBwX0kg-Q-unsplash.jpg?hero-mobile&as=picture';
+	import desktop from '$lib/assets/imgs/caleb-riston-TXiBwX0kg-Q-unsplash.jpg?hero-desktop&quality=90&as=picture';
+	import mobile from '$lib/assets/imgs/caleb-riston-TXiBwX0kg-Q-unsplash.jpg?hero-mobile&quality=90&as=picture';
 	import lqip from '$lib/assets/imgs/caleb-riston-TXiBwX0kg-Q-unsplash.jpg?lqip';
 	import { cn } from '@/utils';
 	import type { HTMLAttributes } from 'svelte/elements';
