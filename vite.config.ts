@@ -4,7 +4,7 @@ import adapter from '@sveltejs/adapter-static';
 import { sveltekit } from '@sveltejs/kit/vite';
 import { defineConfig } from 'vite';
 import lqip from 'vite-plugin-lqip';
-import { imagetools } from 'vite-imagetools'
+import { imagetools } from 'vite-imagetools';
 import { enhancedImages } from '@sveltejs/enhanced-img';
 
 export default defineConfig({
@@ -13,10 +13,14 @@ export default defineConfig({
 		lqip(),
 		imagetools({
 			defaultDirectives: (url) => {
-				if (url.searchParams.has("hero-desktop")) {
-					return new URLSearchParams("aspect=16:9&w=640;750;828;1080;1200;1920;2048;3840&fit=cover&position=center&format=avif;webp;jpg")
-				} else if (url.searchParams.has("hero-mobile")) {
-					return new URLSearchParams("aspect=9:16&w=640;750;828;1080;1280&fit=cover&position=center&format=avif;webp;jpg")
+				if (url.searchParams.has('hero-desktop')) {
+					return new URLSearchParams(
+						'aspect=16:9&w=640;750;828;1080;1200;1920;2048;3840&fit=cover&position=center&format=avif;webp;jpg'
+					);
+				} else if (url.searchParams.has('hero-mobile')) {
+					return new URLSearchParams(
+						'aspect=9:16&w=640;750;828;1080;1280&fit=cover&position=center&format=avif;webp;jpg'
+					);
 				}
 
 				return new URLSearchParams();
