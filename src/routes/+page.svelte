@@ -1,7 +1,7 @@
 <script>
 	import SvelteSeo from 'svelte-seo';
 	import HeroImage from '$lib/components/HeroImage.svelte';
-	import mask_base64 from '$lib/assets/imgs/mountain_mask.png?format=webp&quality=100&inline';
+	import mask_base64 from '$lib/assets/imgs/mountain_mask.png?aspect=9:16&height=1080&fit=cover&position=center&format=webp&quality=100&inline';
 	import { scrollY } from 'svelte/reactivity/window';
 	import ShareBar from '@/components/ShareBar.svelte';
 
@@ -14,7 +14,7 @@
 	<section class="relative mx-auto">
 		<HeroImage class="max-w-[1920px] w-full" />
 		<div
-			class="absolute top-0 left-0 w-full h-full mask-center mask-cover"
+			class="absolute top-0 left-0 w-full h-full mask-center mask-contain"
 			style:mask-image="url('{mask_base64}')"
 		>
 			<div
