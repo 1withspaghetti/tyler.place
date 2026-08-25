@@ -4,8 +4,7 @@
 	import mask_base64 from '$lib/assets/imgs/mountain_mask.png?aspect=9:16&height=1080&fit=cover&position=center&format=webp&quality=100&inline';
 	import { scrollY } from 'svelte/reactivity/window';
 	import ShareBar from '@/components/ShareBar.svelte';
-	import DefinitionProvider from '@/components/ui/definition/definition-provider.svelte';
-	import Definition from '@/components/ui/definition/definition.svelte';
+	import * as Popover from '@/components/ui/popover';
 
 	const titleTranslate = $derived(Math.min(scrollY.current || 0, 500) / 10);
 </script>
@@ -44,36 +43,41 @@
 				University in SLO where I'm expected to graduate May 2029.
 			</p>
 			<p class="mb-4">
-				I love building <Definition class="underline decoration-dotted"
-					>{#snippet desc()}
-						<p class="text-sm">
+				I love building <Popover.Root
+					><Popover.Trigger openOnHover openDelay={300} class="underline decoration-dotted"
+						>data-oriented systems,</Popover.Trigger
+					><Popover.Content side="top"
+						><p class="text-sm">
 							Like this <a
 								class="underline"
 								href="https://github.com/cpsupermileage/Telemetry-PWA"
 								target="_blank">offline-first telemetry system</a
 							>
-						</p>
-					{/snippet}data-oriented systems,</Definition
-				> calculating <Definition class="underline decoration-dotted"
-					>{#snippet desc()}
-						<p class="text-sm">
+						</p></Popover.Content
+					></Popover.Root
+				> calculating <Popover.Root
+					><Popover.Trigger openOnHover openDelay={300} class="underline decoration-dotted">
+						optimal strategies,</Popover.Trigger
+					><Popover.Content
+						><p class="text-sm">
 							Anybody play <a
 								class="underline"
 								href="https://github.com/1withspaghetti/Backgammon_Simulator"
 								target="_blank">Backgammon</a
 							>?
-						</p>
-					{/snippet}optimal strategies,</Definition
-				> and engineering <Definition class="underline decoration-dotted"
-					>{#snippet desc()}
-						<p class="text-sm">
+						</p></Popover.Content
+					></Popover.Root
+				> and engineering <Popover.Root
+					><Popover.Trigger openOnHover openDelay={300} class="underline decoration-dotted"
+						>scalable backend logic.</Popover.Trigger
+					><Popover.Content
+						><p class="text-sm">
 							Always taking advantage of serverless web infrastructure like Cloudflare Workers, D1,
 							and Durable Objects!
-						</p>
-					{/snippet}scalable backend logic.</Definition
+						</p></Popover.Content
+					></Popover.Root
 				>
 			</p>
-			<DefinitionProvider />
 		</div>
 	</section>
 </main>
