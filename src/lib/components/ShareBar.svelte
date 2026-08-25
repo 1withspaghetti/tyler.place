@@ -20,29 +20,29 @@
 </script>
 
 <div class="flex items-center gap-4 text-background dark:text-foreground">
-    <a
-        class="block p-2 hover:bg-background/20 rounded-lg"
-        aria-label="Email"
-        href="mailto:tylerlplace@gmail.com"
-        target="_blank"
-        rel="noreferrer"
-    >
-        <Mail class="size-6" strokeWidth={2.5} />
-    </a>
-    <a
-        class="block p-2 hover:bg-background/20 rounded-lg"
-        aria-label="Github"
-        href="https://github.com/1withspaghetti"
-        target="_blank"
-        rel="noreferrer"
-    >
-        <SiGithub class="size-6" strokeWidth={2.5} />
-    </a>
-    <button
-        class="block p-2 hover:bg-background/20 rounded-lg cursor-pointer"
-        aria-label="Email"
-        onclick={share}
-    >
-        <Share2 class="size-6" strokeWidth={2.5} />
-    </button>
+	<a
+		class="block p-2 hover:bg-background/20 rounded-lg"
+		aria-label="Email"
+		href="mailto:tylerlplace@gmail.com"
+		target="_blank"
+		rel="noreferrer"
+	>
+		<Mail class="size-6" strokeWidth={2.5} />
+	</a>
+	<a
+		class="block p-2 hover:bg-background/20 rounded-lg"
+		aria-label="Github"
+		href="https://github.com/1withspaghetti"
+		target="_blank"
+		rel="noreferrer"
+	>
+		<SiGithub class="size-6" strokeWidth={2.5} />
+	</a>
+	<button
+		class="block p-2 hover:bg-background/20 rounded-lg cursor-pointer"
+		aria-label="Email"
+		onclick={share}
+	>
+		<Share2 class="size-6" strokeWidth={2.5} />
+	</button>
 </div>
