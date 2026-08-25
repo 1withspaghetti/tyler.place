@@ -23,6 +23,7 @@
 	<a
 		class="block p-2 hover:bg-background/20 rounded-lg"
 		aria-label="Email"
+		title="Email Me"
 		href="mailto:tylerlplace@gmail.com"
 		target="_blank"
 		rel="noreferrer"
@@ -32,15 +33,17 @@
 	<a
 		class="block p-2 hover:bg-background/20 rounded-lg"
 		aria-label="Github"
+		title="My Github"
 		href="https://github.com/1withspaghetti"
 		target="_blank"
 		rel="noreferrer"
 	>
-		<SiGithub class="size-6" strokeWidth={2.5} />
+		<SiGithub class="size-6" title="My Github" strokeWidth={2.5} />
 	</a>
 	<button
 		class="block p-2 hover:bg-background/20 rounded-lg cursor-pointer"
-		aria-label="Email"
+		aria-label="Share"
+		title="Share URL"
 		onclick={share}
 	>
 		<Share2 class="size-6" strokeWidth={2.5} />
