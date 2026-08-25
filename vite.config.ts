@@ -15,7 +15,11 @@ export default defineConfig({
 			defaultDirectives: (url) => {
 				if (url.searchParams.has('hero-desktop')) {
 					return new URLSearchParams(
-						'aspect=16:9&w=640;750;828;1080;1200;1920;2048;3840&fit=cover&position=center&format=avif;webp'
+						'aspect=16:9&w=1080;1200;1920;2048;3840&fit=cover&position=center&format=avif;webp'
+					);
+				} else if (url.searchParams.has('hero-tablet')) {
+					return new URLSearchParams(
+						'aspect=4:3&w=640;750;828;1080;1280;1920;2048&fit=cover&position=center&format=avif;webp'
 					);
 				} else if (url.searchParams.has('hero-mobile')) {
 					return new URLSearchParams(

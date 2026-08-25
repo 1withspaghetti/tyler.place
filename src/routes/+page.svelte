@@ -14,8 +14,8 @@
 	<section class="relative mx-auto">
 		<HeroImage class="max-w-[1920px] w-full" />
 		<div
-			class="absolute top-0 left-0 w-full h-full mask-center mask-cover mask-(--mask)"
-			style:--mask="url('{mask_base64}')"
+			class="absolute top-0 left-0 w-full h-full mask-center mask-cover"
+			style:mask-image="url('{mask_base64}')"
 		>
 			<div
 				class="absolute bottom-[51%] sm:bottom-[48%] text-center w-full font-heading text-background dark:text-foreground"
