@@ -11,10 +11,10 @@
 
 <picture>
 	{#each Object.entries(desktop.sources) as [format, srcset] (format)}
-		<source {srcset} type={'image/' + format} media="(width >= 64rem)" />
+		<source {srcset} type={'image/' + format} media="(width >= 80rem)" />
 	{/each}
 	{#each Object.entries(tablet.sources) as [format, srcset] (format)}
-		<source {srcset} type={'image/' + format} media="(width > 40rem and width < 64rem)" />
+		<source {srcset} type={'image/' + format} media="(width > 40rem and width < 80rem)" />
 	{/each}
 	{#each Object.entries(mobile.sources) as [format, srcset] (format)}
 		<source {srcset} type={'image/' + format} media="(width < 40rem)" />
@@ -26,6 +26,6 @@
 		style:background-size="cover"
 		style:font-size="0"
 		{...props}
-		class={cn('aspect-9/16 sm:aspect-4/3 lg:aspect-16/9 object-cover object-center', props.class)}
+		class={cn('aspect-9/16 sm:aspect-4/3 xl:aspect-16/9 object-cover object-center', props.class)}
 	/>
 </picture>

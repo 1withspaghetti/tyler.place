@@ -18,10 +18,10 @@
 			style:mask-image="url('{mask_base64}')"
 		>
 			<div
-				class="absolute bottom-[51%] sm:bottom-[48%] text-center w-full font-heading text-background dark:text-foreground"
+				class="absolute bottom-[51%] sm:bottom-[50%] xl:bottom-[49%] text-center w-full font-heading text-background dark:text-foreground"
 				style:transform="translateY({titleTranslate}px)"
 			>
-				<h1 class="text-6xl sm:text-7xl lg:text-8xl xl:text-9xl font-bold">Tyler Place</h1>
+				<h1 class="text-6xl sm:text-7xl xl:text-8xl font-bold">Tyler Place</h1>
 			</div>
 		</div>
 		<div class="absolute right-4 bottom-4">
