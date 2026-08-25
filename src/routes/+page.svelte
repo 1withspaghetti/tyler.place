@@ -3,12 +3,9 @@
 	import HeroImage from '$lib/components/HeroImage.svelte';
 	import mask_base64 from '$lib/assets/imgs/mountain_mask.png?format=webp&quality=100&inline';
 	import { scrollY } from 'svelte/reactivity/window';
-	import { MoveDown } from '@lucide/svelte';
 	import ShareBar from '@/components/ShareBar.svelte';
 
 	const titleTranslate = $derived(Math.min(scrollY.current || 0, 250) / 5);
-
-	const scrollNotifOpacity = $derived(1 - Math.min((scrollY.current || 0) / 200, 1));
 </script>
 
 <SvelteSeo title="Tyler Place" />
@@ -29,13 +26,6 @@
 		</div>
 		<div class="absolute right-4 bottom-4">
 			<ShareBar />
-		</div>
-		<div class="fixed left-1/2 bottom-8 -translate-x-1/2" style:opacity={scrollNotifOpacity}>
-			<div class="bg-background/50 rounded-lg flex items-center px-4 py-2 gap-2">
-				<MoveDown class="size-4" strokeWidth={3} />
-				<div class="font-bold text-nowrap">Scroll Down</div>
-				<MoveDown class="size-4" strokeWidth={3} />
-			</div>
 		</div>
 	</section>
 </main>
