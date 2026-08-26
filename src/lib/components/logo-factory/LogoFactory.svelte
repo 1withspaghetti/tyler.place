@@ -37,23 +37,58 @@
     <use x="350" y="400" href="#conveyer" />
 
     <g>
-        <use href="#logos-svelte-icon" x="0" y="315" width="100" height="100">
-             <animate
-                attributeName="x"
-                begin="0s"
-                dur="3s"
-                from="-100"
-                to="500"
-                repeatCount="indefinite" />
-        </use>
-        <rect x="0" y="315" width="100" height="100" rx="5" ry="5" fill="#222222" stroke="none">
+        <use href="#logos-svelte-icon" x="0" y="315" width="100" height="100" transform-origin="250 415">
             <animate
                 attributeName="x"
                 begin="0s"
-                dur="3s"
-                from="-100"
-                to="500"
+                dur="2s"
+                values="-100; 200; 200; 500"
+                calcMode="spline"
+                keyTimes="0; 0.4; 0.6; 1"
+                keySplines="0 0.5 0.75 1; 0 0 1 1; 0.5 0 1 0.75"
+                repeatCount="indefinite" />
+            <animateTransform
+                attributeName="transform"
+                type="scale"
+                begin="0s"
+                dur="2s"
+                values="1 1; 1 1; 1.5 0; 1 1; 1 1"
+                calcMode="spline"
+                keyTimes="0; 0.44; 0.5; 0.55; 1"
+                keySplines="0 0 1 1; 0.25 0 0.5 0; 0.25 0 1 1; 0 0 1 1"
+                repeatCount="indefinite" />
+        </use>
+        <rect x="0" y="315" width="100" height="100" transform-origin="250 415" rx="5" ry="5" fill="#222222" stroke="none">
+            <animate
+                attributeName="x"
+                begin="0s"
+                dur="2s"
+                values="-100; 200; 200; 500"
+                calcMode="spline"
+                keyTimes="0; 0.4; 0.6; 1"
+                keySplines="0 0.5 0.75 1; 0 0 1 1; 0.5 0 1 0.75"
+                repeatCount="indefinite" />
+            <animateTransform
+                attributeName="transform"
+                type="scale"
+                begin="0s"
+                dur="2s"
+                values="1 1; 1 1; 1.5 0; 1.5 0; 1.5 0"
+                calcMode="spline"
+                keyTimes="0; 0.44; 0.5; 0.55; 1"
+                keySplines="0 0 1 1; 0.25 0 0.5 0; 0.25 0 1 1; 0 0 1 1"
                 repeatCount="indefinite" />
         </rect>
     </g>
+    <rect x="175" y="50" width="150" height="50" fill="#222222" stroke="none">
+        <animate
+            attributeName="y"
+            begin="0s"
+            dur="2s"
+            values="165; 165; 365; 165; 165"
+            calcMode="spline"
+            keyTimes="0; 0.4; 0.5; 0.6; 1"
+            keySplines="0 0 1 1; 0.25 0 0.5 0; 0.25 0 1 1; 0 0 1 1"
+            repeatCount="indefinite" />
+    </rect>
 </svg>
