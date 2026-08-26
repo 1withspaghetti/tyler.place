@@ -5,6 +5,7 @@
 	import { scrollY } from 'svelte/reactivity/window';
 	import ShareBar from '@/components/ShareBar.svelte';
 	import * as Popover from '@/components/ui/popover';
+	import LogoFactory from '@/components/logo-factory/LogoFactory.svelte';
 
 	const titleTranslate = $derived(Math.min(scrollY.current || 0, 500) / 10);
 </script>
@@ -30,10 +31,8 @@
 		</div>
 	</section>
 	<section class="flex flex-wrap-reverse justify-center p-8 gap-16">
-		<div
-			class="w-64 h-64 bg-blue-200 flex items-center justify-center text-white font-bold text-lg"
-		>
-			[Placeholder]
+		<div>
+			<LogoFactory class="size-96" />
 		</div>
 		<div class="max-w-lg">
 			<h2 class="text-3xl font-bold font-heading mb-4">Who am I?</h2>
