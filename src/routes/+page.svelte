@@ -32,7 +32,7 @@
 	</section>
 	<section class="flex flex-wrap-reverse justify-center p-8 gap-16">
 		<div>
-			<LogoFactory class="size-96" />
+			<LogoFactory class="size-80" />
 		</div>
 		<div class="max-w-lg">
 			<h2 class="text-3xl font-bold font-heading mb-4">Who am I?</h2>
