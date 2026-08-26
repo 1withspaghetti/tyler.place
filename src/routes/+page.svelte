@@ -36,12 +36,12 @@
 		</div>
 		<div class="max-w-lg">
 			<h2 class="text-3xl font-bold font-heading mb-4">Who am I?</h2>
-			<p class="mb-4">
-				I'm Tyler, a passionate and optimization-obsessed software engineer with experience in Web,
+			<p class="mb-6">
+				I'm Tyler, a passionate and optimization-obsessed <b>software engineer</b> with experience in Web,
 				IOT, and Server Management. I'm currently studying SE at California Polytechnic State
-				University in SLO where I'm expected to graduate May 2029.
+				University in SLO!
 			</p>
-			<p class="mb-4">
+			<p class="mb-6">
 				I love building <Popover.Root
 					><Popover.Trigger openOnHover openDelay={300} class="underline decoration-dotted"
 						>data-oriented systems,</Popover.Trigger
@@ -76,6 +76,12 @@
 						</p></Popover.Content
 					></Popover.Root
 				>
+			</p>
+			<p class="mb-6">
+				Check ouy my <a href="https://github.com/1withspaghetti" target="_blank" rel="noreferrer" class="underline">GitHub</a> or <a href="mailto:tylerlplace@gmail.com" target="_blank" rel="noreferrer" class="underline">email me</a> if you want to chat!
+			</p>
+			<p class="text-center">
+				&lt;3
 			</p>
 		</div>
 	</section>
