@@ -27,7 +27,7 @@
 			</div>
 		</div>
 		<div class="absolute right-4 bottom-4">
-			<ShareBar />
+			<ShareBar class="text-background dark:text-foreground" />
 		</div>
 	</section>
 	<section class="flex flex-wrap-reverse justify-center p-8 gap-16">

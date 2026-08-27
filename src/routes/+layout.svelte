@@ -2,6 +2,7 @@
 	import './layout.css';
 	import { Toaster } from '$lib/components/ui/sonner';
 	import * as Tooltip from '@/components/ui/tooltip';
+	import Footer from '@/components/Footer.svelte';
 
 	let { children } = $props();
 </script>
@@ -10,3 +11,4 @@
 <Tooltip.Provider>
 	{@render children()}
 </Tooltip.Provider>
+<Footer />

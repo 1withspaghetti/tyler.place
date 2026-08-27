@@ -2,6 +2,10 @@
 	import { Mail, Share2 } from '@lucide/svelte';
 	import { toast } from 'svelte-sonner';
 	import { SiGithub } from '@icons-pack/svelte-simple-icons';
+	import type { HTMLAttributes } from 'svelte/elements';
+	import { cn } from '@/utils';
+
+	let { class: className, ...restProps }: HTMLAttributes<HTMLDivElement> = $props();
 
 	async function share() {
 		try {
@@ -19,7 +23,7 @@
 	}
 </script>
 
-<div class="flex items-center gap-4 text-background dark:text-foreground">
+<div class={cn('flex items-center gap-4', className)} {...restProps}>
 	<a
 		class="block p-2 hover:bg-background/20 rounded-lg"
 		aria-label="Email"
