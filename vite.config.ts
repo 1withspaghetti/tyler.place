@@ -5,7 +5,6 @@ import { sveltekit } from '@sveltejs/kit/vite';
 import { defineConfig } from 'vite';
 import lqip from 'vite-plugin-lqip';
 import { imagetools } from 'vite-imagetools';
-import { enhancedImages } from '@sveltejs/enhanced-img';
 
 export default defineConfig({
 	plugins: [
@@ -30,7 +29,6 @@ export default defineConfig({
 				return new URLSearchParams();
 			}
 		}),
-		enhancedImages(),
 		sveltekit({
 			compilerOptions: {
 				// Force runes mode for the project, except for libraries. Can be removed in svelte 6.
