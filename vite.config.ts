@@ -24,6 +24,10 @@ export default defineConfig({
 					return new URLSearchParams(
 						'aspect=9:16&w=640;750;828;1080;1280&fit=cover&position=center&format=avif;webp'
 					);
+				} else if (url.searchParams.has('post-cover')) {
+					return new URLSearchParams(
+						'aspect=16:9&w=640;750;828;1080;1200;1920;2048&fit=cover&position=center&format=avif;webp'
+					);
 				}
 
 				return new URLSearchParams();
