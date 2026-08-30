@@ -34,9 +34,11 @@ declare module '*&inline' {
 
 declare module '*.md' {
 	import type { SvelteComponent } from 'svelte'
-	import type { MetadataExport } from '$lib/types/mdsvex'
+	import type { MarkdownExport } from '$lib/types/mdsvex'
+	import type { PictureExport } from '$lib/types/imageTools'
 
 	export default class Comp extends SvelteComponent{}
 
-	export const metadata: MetadataExport
+	export const metadata: MarkdownExport;
+	export const cover: PictureExport | undefined;
 }

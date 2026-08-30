@@ -1,7 +1,4 @@
-import type { PictureExport } from "./imageTools";
-
 export type MetadataExport = {
     title?: string,
-    desc?: string,
-    cover?: PictureExport
+    desc?: string
 } & Record<string, unknown>;
