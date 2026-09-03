@@ -5,6 +5,9 @@ import { sveltekit } from '@sveltejs/kit/vite';
 import { defineConfig } from 'vite';
 import lqip from 'vite-plugin-lqip';
 import { imagetools } from 'vite-imagetools';
+import rehypeSlug from 'rehype-slug';
+import remarkGfm from 'remark-gfm';
+import remarkBreaks from 'remark-breaks';
 
 export default defineConfig({
 	plugins: [
@@ -26,7 +29,7 @@ export default defineConfig({
 					);
 				} else if (url.searchParams.has('post-cover')) {
 					return new URLSearchParams(
-						'aspect=16:9&w=640;750;828;1080;1200;1920;2048&fit=cover&position=center&format=avif;webp'
+						'aspect=16:9&w=640;750;828;1080;1200;1536&fit=cover&position=center&format=avif;webp'
 					);
 				}
 
@@ -40,7 +43,13 @@ export default defineConfig({
 					filename.split(/[/\\]/).includes('node_modules') ? undefined : true
 			},
 			adapter: adapter(),
-			preprocess: [mdsvex({ extensions: ['.svx', '.md'] })],
+			preprocess: [
+				mdsvex({
+					extensions: ['.svx', '.md'],
+					remarkPlugins: [remarkGfm, remarkBreaks],
+					rehypePlugins: [rehypeSlug]
+				})
+			],
 			extensions: ['.svelte', '.svx', '.md'],
 			alias: {
 				'@/*': './src/lib/*'
