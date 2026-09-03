@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 	import SvelteSeo from 'svelte-seo';
 	import HeroImage from '$lib/components/HeroImage.svelte';
 	import mask_base64 from '$lib/assets/imgs/mountain_mask.png?aspect=9:16&height=1080&fit=cover&position=center&format=webp&quality=100&inline';
@@ -6,8 +6,13 @@
 	import ShareBar from '@/components/ShareBar.svelte';
 	import * as Popover from '@/components/ui/popover';
 	import LogoFactory from '@/components/logo-factory/LogoFactory.svelte';
+	import type { PageProps } from './$types';
+	import PostCard from '@/components/PostCard.svelte';
 
 	const titleTranslate = $derived(Math.min(scrollY.current || 0, 500) / 10);
+
+	const { data }: PageProps = $props();
+	const posts = $derived(data.posts);
 </script>
 
 <SvelteSeo title="Tyler Place" />
@@ -20,10 +25,14 @@
 			style:mask-image="url('{mask_base64}')"
 		>
 			<div
-				class="absolute bottom-[51%] sm:bottom-[50%] xl:bottom-[49%] text-center w-full font-heading text-background dark:text-foreground"
+				class="absolute bottom-[51%] sm:bottom-[50%] xl:bottom-[49%] text-center w-full"
 				style:transform="translateY({titleTranslate}px)"
 			>
-				<h1 class="text-6xl sm:text-7xl xl:text-8xl font-bold">Tyler Place</h1>
+				<h1
+					class="text-6xl sm:text-7xl xl:text-8xl font-bold font-heading text-background dark:text-foreground"
+				>
+					Tyler Place
+				</h1>
 			</div>
 		</div>
 		<div class="absolute right-4 bottom-4">
@@ -90,6 +99,13 @@
 				> if you want to chat!
 			</p>
 			<p class="text-center">&lt;3</p>
+		</div>
+	</section>
+	<section>
+		<div class="flex gap-8">
+			{#each posts as post (post.slug)}
+				<PostCard {post} />
+			{/each}
 		</div>
 	</section>
 </main>

@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { Separator } from '@/components/ui/separator';
 	import type { PageData } from './$types';
 
 	let { data }: { data: PageData } = $props();
@@ -47,7 +48,7 @@
 		</div>
 	</div>
 
-	<div class="border-b my-6 mx-4 sm:mx-8"></div>
+	<Separator class="my-6 mx-4 sm:mx-8" />
 
 	<div class="px-4 sm:px-8 prose prose-base lg:prose-lg dark:prose-invert">
 		<Content />
