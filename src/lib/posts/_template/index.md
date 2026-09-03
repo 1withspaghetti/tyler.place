@@ -2,10 +2,14 @@
 title: 'This is a template'
 desc: 'Short description that gives a bit more info'
 date: '09-02-2026'
-author: 'Tyler Place'
+
 coverAlt: 'abstract geometric white wall'
+
+actionHref: 'https://example.com'
+actionText: 'Visit'
 ---
 
+<!-- svelte-ignore script_context_deprecated -->
 <script lang="ts" context="module">
     export { default as cover } from "./cover.jpg?post-cover&as=picture"
     export { default as lqip } from "./cover.jpg?lqip"

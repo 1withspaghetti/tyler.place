@@ -18,7 +18,7 @@
 <SvelteSeo title="Tyler Place" />
 
 <main class="w-full min-h-screen">
-	<section class="relative mx-auto mb-8">
+	<div class="relative mx-auto mb-8">
 		<HeroImage class="max-w-[1920px] w-full" />
 		<div
 			class="absolute top-0 left-0 w-full h-full mask-center mask-contain"
@@ -38,74 +38,77 @@
 		<div class="absolute right-4 bottom-4">
 			<ShareBar class="text-background dark:text-foreground" />
 		</div>
-	</section>
-	<section class="flex flex-wrap-reverse justify-center p-8 gap-16">
-		<div>
-			<LogoFactory class="size-80" />
-		</div>
-		<div class="max-w-lg">
-			<h2 class="text-3xl font-bold font-heading mb-4">Who am I?</h2>
-			<p class="mb-6">
-				I'm Tyler, a passionate and optimization-obsessed <b>software engineer</b> with experience in
-				Web, IOT, and Server Management. I'm currently studying SE at California Polytechnic State University
-				in SLO!
-			</p>
-			<p class="mb-6">
-				I love building <Popover.Root
-					><Popover.Trigger openOnHover openDelay={300} class="underline decoration-dotted"
-						>data-oriented systems,</Popover.Trigger
-					><Popover.Content side="top"
-						><p class="text-sm">
-							Like this <a
-								class="underline"
-								href="https://github.com/cpsupermileage/Telemetry-PWA"
-								target="_blank">offline-first telemetry system</a
-							>
-						</p></Popover.Content
-					></Popover.Root
-				> calculating <Popover.Root
-					><Popover.Trigger openOnHover openDelay={300} class="underline decoration-dotted">
-						optimal strategies,</Popover.Trigger
-					><Popover.Content
-						><p class="text-sm">
-							Anybody play <a
-								class="underline"
-								href="https://github.com/1withspaghetti/Backgammon_Simulator"
-								target="_blank">Backgammon</a
-							>?
-						</p></Popover.Content
-					></Popover.Root
-				> and engineering <Popover.Root
-					><Popover.Trigger openOnHover openDelay={300} class="underline decoration-dotted"
-						>scalable backend logic.</Popover.Trigger
-					><Popover.Content
-						><p class="text-sm">
-							Always taking advantage of serverless web infrastructure like Cloudflare Workers, D1,
-							and Durable Objects!
-						</p></Popover.Content
-					></Popover.Root
-				>
-			</p>
-			<p class="mb-6">
-				Check ouy my <a
-					href="https://github.com/1withspaghetti"
-					target="_blank"
-					rel="noreferrer"
-					class="underline">GitHub</a
-				>
-				or
-				<a href="mailto:tylerlplace@gmail.com" target="_blank" rel="noreferrer" class="underline"
-					>email me</a
-				> if you want to chat!
-			</p>
-			<p class="text-center">&lt;3</p>
-		</div>
-	</section>
-	<section>
-		<div class="flex gap-8">
-			{#each posts as post (post.slug)}
-				<PostCard {post} />
-			{/each}
-		</div>
-	</section>
+	</div>
+	<div class="p-8 max-w-4xl mx-auto">
+		<section class="flex flex-col-reverse md:flex-row items-center justify-center gap-12 mb-12">
+			<div>
+				<LogoFactory class="size-80" />
+			</div>
+			<div>
+				<h2 class="text-3xl font-bold font-heading mb-4">Who am I?</h2>
+				<p class="mb-6">
+					I'm Tyler, a passionate and optimization-obsessed <b>software engineer</b> with experience in
+					Web, IOT, and Server Management. I'm currently studying SE at California Polytechnic State University
+					in SLO!
+				</p>
+				<p class="mb-6">
+					I love building <Popover.Root
+						><Popover.Trigger openOnHover openDelay={300} class="underline decoration-dotted"
+							>data-oriented systems,</Popover.Trigger
+						><Popover.Content side="top"
+							><p class="text-sm">
+								Like this <a
+									class="underline"
+									href="https://github.com/cpsupermileage/Telemetry-PWA"
+									target="_blank">offline-first telemetry system</a
+								>
+							</p></Popover.Content
+						></Popover.Root
+					> calculating <Popover.Root
+						><Popover.Trigger openOnHover openDelay={300} class="underline decoration-dotted">
+							optimal strategies,</Popover.Trigger
+						><Popover.Content
+							><p class="text-sm">
+								Anybody play <a
+									class="underline"
+									href="https://github.com/1withspaghetti/Backgammon_Simulator"
+									target="_blank">Backgammon</a
+								>?
+							</p></Popover.Content
+						></Popover.Root
+					> and engineering <Popover.Root
+						><Popover.Trigger openOnHover openDelay={300} class="underline decoration-dotted"
+							>scalable backend logic.</Popover.Trigger
+						><Popover.Content
+							><p class="text-sm">
+								Always taking advantage of serverless web infrastructure like Cloudflare Workers,
+								D1, and Durable Objects!
+							</p></Popover.Content
+						></Popover.Root
+					>
+				</p>
+				<p class="mb-6">
+					Check out my <a
+						href="https://github.com/1withspaghetti"
+						target="_blank"
+						rel="noreferrer"
+						class="underline">GitHub</a
+					>
+					or
+					<a href="mailto:tylerlplace@gmail.com" target="_blank" rel="noreferrer" class="underline"
+						>email me</a
+					> if you want to chat!
+				</p>
+				<p class="text-center">&lt;3</p>
+			</div>
+		</section>
+		<section class="mb-12">
+			<h2 class="text-3xl font-bold font-heading mb-6">What I've been up to:</h2>
+			<div class="flex flex-wrap justify-start gap-8">
+				{#each posts as post (post.slug)}
+					<PostCard {post} />
+				{/each}
+			</div>
+		</section>
+	</div>
 </main>

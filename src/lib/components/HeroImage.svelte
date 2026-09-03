@@ -26,6 +26,6 @@
 		style:background-size="cover"
 		style:font-size="0"
 		{...props}
-		class={cn('aspect-9/16 sm:aspect-4/3 xl:aspect-16/9 object-cover object-center', props.class)}
+		class={cn('aspect-9/16 sm:aspect-4/3 xl:aspect-video object-cover object-center', props.class)}
 	/>
 </picture>

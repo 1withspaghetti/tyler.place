@@ -21,7 +21,7 @@
 				style:background-image={post.lqip ? `url('${post.lqip.lqip}')` : undefined}
 				style:background-size="cover"
 				style:font-size="0"
-				class="w-full max-w-3xl aspect-16/9 object-cover object-center"
+				class="w-full max-w-3xl aspect-video object-cover object-center"
 			/>
 		</picture>
 	{/if}
@@ -34,15 +34,10 @@
 				{post.desc}
 			</p>
 		{/if}
-		<div class="flex justify-between text-muted-foreground">
+		<div class="text-muted-foreground">
 			{#if post.date}
 				<p>
 					{new Date(post.date).toLocaleDateString()}
-				</p>
-			{/if}
-			{#if post.author}
-				<p>
-					By {post.author}
 				</p>
 			{/if}
 		</div>

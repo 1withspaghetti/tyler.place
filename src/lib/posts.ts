@@ -12,10 +12,10 @@ export interface Post extends MetadataExport {
 export async function getPosts() {
 	let posts: Post[] = [];
 
-	const paths = import.meta.glob('$lib/posts/*/index.md', { eager: true });
+	const paths = import.meta.glob('$lib/posts/*/index.md');
 
 	for (const path in paths) {
-		const file = paths[path];
+		const file = await paths[path]();
 		const slug = path.split('/').at(-2);
 		if (!dev && slug?.startsWith('_')) continue;
 

@@ -4,8 +4,11 @@ export type MetadataExport = {
 	title?: string;
 	desc?: string;
 	date?: string;
-	author?: string;
+
 	coverAlt?: string;
+
+	actionHref?: string;
+	actionText?: string;
 } & Record<string, unknown>;
 
 export type ComponentExport = Component;
