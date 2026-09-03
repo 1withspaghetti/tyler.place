@@ -1,5 +1,5 @@
 ---
-title: 'This is a template'
+title: 'This is a Template'
 desc: 'Short description that gives a bit more info'
 date: '09-02-2026'
 
@@ -15,6 +15,6 @@ actionText: 'Visit'
     export { default as lqip } from "./cover.jpg?lqip"
 </script>
 
-Hello, World!
+## Hello, World!
 
 Template Photo by [Shapelined](https://unsplash.com/@shapelined?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/photos/a-black-and-white-photo-of-a-wall-_JBKdviweXI?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)

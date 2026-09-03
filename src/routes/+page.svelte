@@ -8,6 +8,7 @@
 	import LogoFactory from '@/components/logo-factory/LogoFactory.svelte';
 	import type { PageProps } from './$types';
 	import PostCard from '@/components/PostCard.svelte';
+	import Footer from '@/components/Footer.svelte';
 
 	const titleTranslate = $derived(Math.min(scrollY.current || 0, 500) / 10);
 
@@ -29,6 +30,7 @@
 				style:transform="translateY({titleTranslate}px)"
 			>
 				<h1
+					id="home"
 					class="text-6xl sm:text-7xl xl:text-8xl font-bold font-heading text-background dark:text-foreground"
 				>
 					Tyler Place
@@ -45,7 +47,7 @@
 				<LogoFactory class="size-80" />
 			</div>
 			<div>
-				<h2 class="text-3xl font-bold font-heading mb-4">Who am I?</h2>
+				<h2 id="about" class="text-3xl font-bold font-heading mb-4">Who am I?</h2>
 				<p class="mb-6">
 					I'm Tyler, a passionate and optimization-obsessed <b>software engineer</b> with experience in
 					Web, IOT, and Server Management. I'm currently studying SE at California Polytechnic State University
@@ -103,7 +105,7 @@
 			</div>
 		</section>
 		<section class="mb-12">
-			<h2 class="text-3xl font-bold font-heading mb-6">What I've been up to:</h2>
+			<h2 id="projects" class="text-3xl font-bold font-heading mb-6">What I've been up to:</h2>
 			<div class="flex flex-wrap justify-start gap-8">
 				{#each posts as post (post.slug)}
 					<PostCard {post} />
@@ -112,3 +114,19 @@
 		</section>
 	</div>
 </main>
+
+<Footer>
+	<div class="text-muted-foreground text-sm">
+		Hero photo by <a
+			class="underline"
+			href="https://unsplash.com/@calebriston?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
+			target="_blank">Caleb Riston</a
+		>
+		on
+		<a
+			class="underline"
+			href="https://unsplash.com/photos/mount-rainier-under-soft-sky-TXiBwX0kg-Q?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
+			target="_blank">Unsplash</a
+		>
+	</div>
+</Footer>
