@@ -41,7 +41,7 @@
 
 <Header />
 
-<article class="w-full max-w-3xl p-4 sm:p-8 mx-auto flex flex-col">
+<article class="w-full max-w-4xl p-4 sm:p-8 mx-auto flex flex-col">
 	<h1 class="text-4xl font-bold font-heading mb-4 text-center">
 		{post.title ?? 'Untitled'}
 	</h1>
