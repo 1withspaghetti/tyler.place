@@ -5,6 +5,7 @@
 	import SvelteSeo from 'svelte-seo';
 	import Footer from '@/components/Footer.svelte';
 	import Header from '@/components/Header.svelte';
+	import './prism-atom-dark.css';
 
 	let { data }: { data: PageData } = $props();
 

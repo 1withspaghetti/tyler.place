@@ -29,8 +29,10 @@ export default defineConfig({
 					);
 				} else if (url.searchParams.has('post-cover')) {
 					return new URLSearchParams(
-						'aspect=16:9&w=640;750;828;1080;1200;1536&fit=cover&position=center&format=avif;webp'
+						'aspect=16:9&w=640;750;828;1080;1280;1920&fit=cover&position=center&format=avif;webp'
 					);
+				} else if (url.searchParams.has('post-image')) {
+					return new URLSearchParams('w=640;1080;1920&format=avif;webp&withoutEnlargement');
 				}
 
 				return new URLSearchParams();
