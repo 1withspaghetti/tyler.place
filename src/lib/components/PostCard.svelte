@@ -24,7 +24,10 @@
 		</picture>
 	{/if}
 	<Card.Header>
-		<Card.Title class="line-clamp-1"><a href={resolve('/post/[slug]', { slug: post.slug })}>{post.title || 'Untitled'}</a></Card.Title>
+		<Card.Title class="line-clamp-1"
+			><a href={resolve('/post/[slug]', { slug: post.slug })}>{post.title || 'Untitled'}</a
+			></Card.Title
+		>
 		{#if post.desc}
 			<Card.Description class="line-clamp-3">
 				{post.desc}
