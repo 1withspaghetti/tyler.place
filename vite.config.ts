@@ -1,6 +1,6 @@
 import { mdsvex } from 'mdsvex';
 import tailwindcss from '@tailwindcss/vite';
-import adapter from '@sveltejs/adapter-static';
+import adapter from '@sveltejs/adapter-cloudflare';
 import { sveltekit } from '@sveltejs/kit/vite';
 import { defineConfig } from 'vite';
 import lqip from 'vite-plugin-lqip';
@@ -8,6 +8,7 @@ import { imagetools } from 'vite-imagetools';
 import rehypeSlug from 'rehype-slug';
 import remarkGfm from 'remark-gfm';
 import remarkBreaks from 'remark-breaks';
+import type { Plugin } from 'unified'
 
 export default defineConfig({
 	plugins: [
@@ -48,8 +49,8 @@ export default defineConfig({
 			preprocess: [
 				mdsvex({
 					extensions: ['.svx', '.md'],
-					remarkPlugins: [remarkGfm, remarkBreaks],
-					rehypePlugins: [rehypeSlug]
+					remarkPlugins: [remarkGfm, remarkBreaks as unknown as Plugin],
+					rehypePlugins: [rehypeSlug as unknown as Plugin]
 				})
 			],
 			extensions: ['.svelte', '.svx', '.md'],
