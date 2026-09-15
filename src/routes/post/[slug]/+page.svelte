@@ -3,8 +3,6 @@
 	import type { PageData } from './$types';
 	import { resolve } from '$app/paths';
 	import SvelteSeo from 'svelte-seo';
-	import Footer from '@/components/Footer.svelte';
-	import Header from '@/components/Header.svelte';
 	import './prism-atom-dark.css';
 
 	let { data }: { data: PageData } = $props();
@@ -40,8 +38,6 @@
 	}}
 />
 
-<Header />
-
 <article class="w-full max-w-4xl p-4 sm:p-8 mx-auto flex flex-col">
 	<h1 class="text-4xl font-bold font-heading mb-4 text-center">
 		{post.title ?? 'Untitled'}
@@ -75,5 +71,3 @@
 		<Content />
 	</div>
 </article>
-
-<Footer />
