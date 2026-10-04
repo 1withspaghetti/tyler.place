@@ -16,24 +16,12 @@ export default defineConfig({
 		lqip(),
 		imagetools({
 			defaultDirectives: (url) => {
-				if (url.searchParams.has('hero-desktop')) {
+				if (url.searchParams.has('post-cover')) {
 					return new URLSearchParams(
-						'aspect=16:9&w=1080;1200;1920;2048;3840&fit=cover&position=center&format=avif;webp'
-					);
-				} else if (url.searchParams.has('hero-tablet')) {
-					return new URLSearchParams(
-						'aspect=4:3&w=640;750;828;1080;1280;1920;2048&fit=cover&position=center&format=avif;webp'
-					);
-				} else if (url.searchParams.has('hero-mobile')) {
-					return new URLSearchParams(
-						'aspect=9:16&w=640;750;828;1080;1280&fit=cover&position=center&format=avif;webp'
-					);
-				} else if (url.searchParams.has('post-cover')) {
-					return new URLSearchParams(
-						'aspect=16:9&w=640;750;828;1080;1280;1920&fit=cover&position=center&format=avif;webp'
+						'aspect=16:9&w=320;640;960&fit=cover&position=center&format=avif;webp'
 					);
 				} else if (url.searchParams.has('post-image')) {
-					return new URLSearchParams('w=640;1080;1920&format=avif;webp&withoutEnlargement');
+					return new URLSearchParams('w=640;960;1280;1920&format=avif;webp&withoutEnlargement');
 				}
 
 				return new URLSearchParams();

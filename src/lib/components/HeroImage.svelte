@@ -1,7 +1,7 @@
 <script lang="ts">
-	import desktop from '$lib/assets/imgs/caleb-riston-TXiBwX0kg-Q-unsplash.jpg?aspect=16:9&w=1280;1920;2560;3200;3840&fit=cover&position=center&format=avif;webp&quality=90&as=metadata';
-	import tablet from '$lib/assets/imgs/caleb-riston-TXiBwX0kg-Q-unsplash.jpg?aspect=4:3&w=640;960;1280;1600;1920&fit=cover&position=center&format=avif;webp&quality=90&as=metadata';
-	import mobile from '$lib/assets/imgs/caleb-riston-TXiBwX0kg-Q-unsplash.jpg?aspect=9:16&w=420;640;960;1280;1280&fit=cover&position=center&format=avif;webp&quality=90&as=metadata';
+	import desktop from '$lib/assets/imgs/caleb-riston-TXiBwX0kg-Q-unsplash.jpg?aspect=16:9&w=1280;1920;2560;3200;3840&fit=cover&position=center&format=avif;webp&as=metadata';
+	import tablet from '$lib/assets/imgs/caleb-riston-TXiBwX0kg-Q-unsplash.jpg?aspect=4:3&w=640;960;1280;1600;1920&fit=cover&position=center&format=avif;webp&as=metadata';
+	import mobile from '$lib/assets/imgs/caleb-riston-TXiBwX0kg-Q-unsplash.jpg?aspect=9:16&w=420;640;960;1280;1280&fit=cover&position=center&format=avif;webp&as=metadata';
 	import lqip from '$lib/assets/imgs/caleb-riston-TXiBwX0kg-Q-unsplash.jpg?lqip';
 	import type { Metadata } from '@/types/imageTools';
 	import { cn } from '@/utils';
