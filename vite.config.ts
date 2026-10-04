@@ -18,7 +18,7 @@ export default defineConfig({
 			defaultDirectives: (url) => {
 				if (url.searchParams.has('post-cover')) {
 					return new URLSearchParams(
-						'aspect=16:9&w=320;640;960&fit=cover&position=center&format=avif;webp'
+						'aspect=16:9&w=320;640;960;1280;1920&fit=cover&position=center&format=avif;webp'
 					);
 				} else if (url.searchParams.has('post-image')) {
 					return new URLSearchParams('w=640;960;1280;1920&format=avif;webp&withoutEnlargement');
