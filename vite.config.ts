@@ -8,7 +8,7 @@ import { imagetools } from 'vite-imagetools';
 import rehypeSlug from 'rehype-slug';
 import remarkGfm from 'remark-gfm';
 import remarkBreaks from 'remark-breaks';
-import type { Plugin } from 'unified'
+import type { Plugin } from 'unified';
 
 export default defineConfig({
 	plugins: [

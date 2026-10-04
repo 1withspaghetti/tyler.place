@@ -10,18 +10,23 @@
 	let props: HTMLAttributes<HTMLImageElement> = $props();
 
 	const variants = [
-		{ meta: mobile as Metadata[], media: "(width < 40rem)" },
-		{ meta: tablet as Metadata[], media: "(width >= 40rem) and (width < 80rem)" },
-		{ meta: desktop as Metadata[], media: "(width >= 80rem)" }
+		{ meta: mobile as Metadata[], media: '(width < 40rem)' },
+		{ meta: tablet as Metadata[], media: '(width >= 40rem) and (width < 80rem)' },
+		{ meta: desktop as Metadata[], media: '(width >= 80rem)' }
 	];
 </script>
 
 <picture>
 	{#each variants as variant, i (i)}
-		{@const formats = variant.meta.map(v => v.format).filter((f, i, arr) => arr.indexOf(f) == i)}
+		{@const formats = variant.meta.map((v) => v.format).filter((f, i, arr) => arr.indexOf(f) == i)}
 		{#each formats as format (format)}
-			{@const meta = variant.meta.filter(m => m.format == format)}
-			<source srcset={meta.map(m => `${m.src} ${m.width}w`).join(', ')} type={'image/' + format} sizes={meta.map(m => `(max-width: ${m.width}px) ${m.width}px`).join(', ')} media={variant.media} />
+			{@const meta = variant.meta.filter((m) => m.format == format)}
+			<source
+				srcset={meta.map((m) => `${m.src} ${m.width}w`).join(', ')}
+				type={'image/' + format}
+				sizes={meta.map((m) => `(max-width: ${m.width}px) ${m.width}px`).join(', ')}
+				media={variant.media}
+			/>
 		{/each}
 	{/each}
 	<img
