@@ -11,11 +11,12 @@
 	{#if post.cover}
 		<picture>
 			{#each Object.entries(post.cover.sources) as [format, srcset] (format)}
-				<source {srcset} type={'image/' + format} />
+				<source {srcset} type={'image/' + format} sizes="320px" />
 			{/each}
 			<img
 				src={post.cover.img.src}
 				alt={post.coverAlt}
+				loading="lazy"
 				style:background-image={post.lqip ? `url('${post.lqip.lqip}')` : undefined}
 				style:background-size="cover"
 				style:font-size="0"
