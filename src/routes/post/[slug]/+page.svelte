@@ -33,7 +33,8 @@
 		site_name: 'Tyler.Place',
 		article: {
 			author: ['Tyler Place'],
-			published_time: post.date ? new Date(post.date).toISOString() : undefined
+			published_time: post.date ? new Date(post.date).toISOString() : undefined,
+			modified_time: post.edited ? new Date(post.edited).toISOString() : undefined,
 		}
 	}}
 />
@@ -44,8 +45,9 @@
 	</h1>
 	<div class="text-muted-foreground text-center">
 		<p>
-			{#if post.date}{new Date(post.date).toLocaleDateString()} |{/if} By
-			<a href={resolve('/')} class="underline">Tyler Place</a>
+			{#if post.date}{new Date(post.date).toLocaleDateString()} &nbsp;|&nbsp;{/if}
+			By <a href={resolve('/')} class="underline">Tyler Place</a>
+			{#if post.edited}&nbsp;|&nbsp; Edited {new Date(post.edited).toLocaleDateString()}{/if}
 		</p>
 	</div>
 

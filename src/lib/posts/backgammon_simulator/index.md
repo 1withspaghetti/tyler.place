@@ -2,6 +2,7 @@
 title: 'Solving Backgammon'
 desc: 'Calculating quintillions of outcomes in milliseconds. Ever wondered your exact probability of winning while bearing off?'
 date: '12-15-2025'
+edited: '09-04-2026'
 
 coverAlt: 'backgammon board with console text showing different win chances'
 

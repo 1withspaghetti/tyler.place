@@ -4,6 +4,7 @@ export type MetadataExport = {
 	title?: string;
 	desc?: string;
 	date?: string;
+	edited?: string;
 
 	coverAlt?: string;
 

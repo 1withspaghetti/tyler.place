@@ -9,34 +9,36 @@
 
 <Card.Root class="w-full max-w-xs pt-0">
 	{#if post.cover}
-		<picture>
-			{#each Object.entries(post.cover.sources) as [format, srcset] (format)}
-				<source {srcset} type={'image/' + format} sizes="320px" />
-			{/each}
-			<img
-				src={post.cover.img.src}
-				alt={post.coverAlt}
-				loading="lazy"
-				style:background-image={post.lqip ? `url('${post.lqip.lqip}')` : undefined}
-				style:background-size="cover"
-				style:font-size="0"
-				class="w-full max-w-xs aspect-video object-cover object-center"
-			/>
-		</picture>
+		<a href={resolve('/post/[slug]', { slug: post.slug })}>
+			<picture>
+				{#each Object.entries(post.cover.sources) as [format, srcset] (format)}
+					<source {srcset} type={'image/' + format} sizes="320px" />
+				{/each}
+				<img
+					src={post.cover.img.src}
+					alt={post.coverAlt}
+					loading="lazy"
+					style:background-image={post.lqip ? `url('${post.lqip.lqip}')` : undefined}
+					style:background-size="cover"
+					style:font-size="0"
+					class="w-full max-w-xs aspect-video object-cover object-center"
+				/>
+			</picture>
+		</a>
 	{/if}
 	<Card.Header>
 		<Card.Title class="line-clamp-1"
 			><a href={resolve('/post/[slug]', { slug: post.slug })}>{post.title || 'Untitled'}</a
 			></Card.Title
 		>
+		{#if post.date}
+			<Card.Description class="mt-1">
+				{new Date(post.date).toLocaleDateString()}
+			</Card.Description>
+		{/if}
 		{#if post.desc}
 			<Card.Description class="line-clamp-3">
 				{post.desc}
-			</Card.Description>
-		{/if}
-		{#if post.date}
-			<Card.Description>
-				{new Date(post.date).toLocaleDateString()}
 			</Card.Description>
 		{/if}
 	</Card.Header>

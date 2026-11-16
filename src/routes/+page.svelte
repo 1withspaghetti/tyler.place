@@ -4,7 +4,6 @@
 	import mask_base64 from '$lib/assets/imgs/mountain_mask.png?aspect=9:16&height=1080&fit=cover&position=center&format=webp&quality=100&inline';
 	import { scrollY } from 'svelte/reactivity/window';
 	import ShareBar from '@/components/ShareBar.svelte';
-	import * as Popover from '@/components/ui/popover';
 	import LogoFactory from '@/components/logo-factory/LogoFactory.svelte';
 	import type { PageProps } from './$types';
 	import PostCard from '@/components/PostCard.svelte';
@@ -54,50 +53,19 @@
 					in SLO!
 				</p>
 				<p class="mb-6">
-					I love building <Popover.Root
-						><Popover.Trigger openOnHover openDelay={300} class="underline decoration-dotted"
-							>data-oriented systems,</Popover.Trigger
-						><Popover.Content side="top"
-							><p class="text-sm">
-								Like this <a
-									class="underline"
-									href="https://github.com/cpsupermileage/Telemetry-PWA"
-									target="_blank">offline-first telemetry system</a
-								>
-							</p></Popover.Content
-						></Popover.Root
-					> calculating <Popover.Root
-						><Popover.Trigger openOnHover openDelay={300} class="underline decoration-dotted">
-							optimal strategies,</Popover.Trigger
-						><Popover.Content
-							><p class="text-sm">
-								Anybody play <a
-									class="underline"
-									href="https://github.com/1withspaghetti/Backgammon_Simulator"
-									target="_blank">Backgammon</a
-								>?
-							</p></Popover.Content
-						></Popover.Root
-					> and engineering <Popover.Root
-						><Popover.Trigger openOnHover openDelay={300} class="underline decoration-dotted"
-							>scalable backend logic.</Popover.Trigger
-						><Popover.Content
-							><p class="text-sm">
-								Always taking advantage of serverless web infrastructure like Cloudflare Workers,
-								D1, and Durable Objects!
-							</p></Popover.Content
-						></Popover.Root
-					>
+					I love building embedded systems, designing data pipelines, and engineering scalable backend logic. 
+					I've help build <a href="https://sites.google.com/view/calpolysupermileage/home" target="_blank" class="underline">hyper-efficient vehicles</a>, 
+					run an <a href="https://github.com/1withspaghetti/AstroConnect" target="_blank" class="underline">internal website</a> for University of Washington Astronomy,
+					and cosplay with a self-made protogen head.
 				</p>
 				<p class="mb-6">
 					Check out my <a
 						href="https://github.com/1withspaghetti"
 						target="_blank"
-						rel="noreferrer"
 						class="underline">GitHub</a
 					>
 					or
-					<a href="mailto:tylerlplace@gmail.com" target="_blank" rel="noreferrer" class="underline"
+					<a href="mailto:tylerlplace@gmail.com" target="_blank" class="underline"
 						>email me</a
 					> if you want to chat!
 				</p>
