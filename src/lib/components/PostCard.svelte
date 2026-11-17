@@ -3,6 +3,7 @@
 	import * as Card from '$lib/components/ui/card';
 	import { Button } from './ui/button';
 	import { resolve } from '$app/paths';
+	import { ExternalLink } from '@lucide/svelte';
 
 	let { post }: { post: Post } = $props();
 </script>
@@ -45,7 +46,7 @@
 	<Card.Footer class="gap-2">
 		{#if post.actionHref}
 			<Button variant="default" size="lg" href={post.actionHref} class="flex-1"
-				>{post.actionText || 'Visit'}</Button
+				>{post.actionText || 'Visit'} <ExternalLink class="size-4" /></Button
 			>
 		{/if}
 		<Button

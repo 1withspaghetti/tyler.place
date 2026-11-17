@@ -40,47 +40,49 @@
 			<ShareBar class="text-background dark:text-foreground" />
 		</div>
 	</div>
-	<div class="p-8 max-w-4xl mx-auto">
-		<section class="flex flex-col-reverse md:flex-row items-center justify-center gap-12 mb-12">
-			<div>
-				<LogoFactory class="size-80" />
-			</div>
-			<div>
-				<h2 id="about" class="text-3xl font-bold font-heading mb-4">Who am I?</h2>
-				<p class="mb-6">
-					I'm Tyler, a passionate and optimization-obsessed <b>software engineer</b> with experience in
-					Web, IOT, and Server Management. I'm currently studying SE at California Polytechnic State University
-					in SLO!
-				</p>
-				<p class="mb-6">
-					I love building embedded systems, designing data pipelines, and engineering scalable backend logic. 
-					I've help build <a href="https://sites.google.com/view/calpolysupermileage/home" target="_blank" class="underline">hyper-efficient vehicles</a>, 
-					run an <a href="https://github.com/1withspaghetti/AstroConnect" target="_blank" class="underline">internal website</a> for University of Washington Astronomy,
-					and cosplay with a self-made protogen head.
-				</p>
-				<p class="mb-6">
-					Check out my <a
-						href="https://github.com/1withspaghetti"
-						target="_blank"
-						class="underline">GitHub</a
-					>
-					or
-					<a href="mailto:tylerlplace@gmail.com" target="_blank" class="underline"
-						>email me</a
-					> if you want to chat!
-				</p>
-				<p class="text-center">&lt;3</p>
-			</div>
-		</section>
-		<section class="mb-12">
-			<h2 id="projects" class="text-3xl font-bold font-heading mb-6">What I've been up to:</h2>
-			<div class="flex flex-wrap justify-start gap-8">
-				{#each posts as post (post.slug)}
-					<PostCard {post} />
-				{/each}
-			</div>
-		</section>
-	</div>
+	<section class="p-8 max-w-4xl mx-auto flex flex-col-reverse md:flex-row items-center justify-center gap-12 mb-12">
+		<div>
+			<LogoFactory class="size-80" />
+		</div>
+		<div>
+			<h2 id="about" class="text-3xl font-bold font-heading mb-4">Who am I?</h2>
+			<p class="mb-6">
+				I'm Tyler, a passionate and optimization-obsessed <b>software engineer</b> with experience in
+				Web, IOT, and Server Management. I'm currently studying SE at California Polytechnic State University
+				in SLO!
+			</p>
+			<p class="mb-6">
+				I love building embedded systems, designing data pipelines, and engineering scalable backend logic. 
+				I've help build <a href="https://sites.google.com/view/calpolysupermileage/home" target="_blank" class="underline">hyper-efficient vehicles</a>, 
+				run an <a href="https://github.com/1withspaghetti/AstroConnect" target="_blank" class="underline">internal website</a> for University of Washington Astronomy,
+				and cosplay with a self-made protogen head.
+			</p>
+			<p class="mb-6">
+				Check out my <a
+					href="https://github.com/1withspaghetti"
+					target="_blank"
+					class="underline">GitHub</a
+				>
+				or
+				<a href="mailto:tylerlplace@gmail.com" target="_blank" class="underline"
+					>email me</a
+				> if you want to chat!
+			</p>
+			<p class="text-center">&lt;3</p>
+		</div>
+	</section>
+	<section class="p-8 max-w-6xl mx-auto mb-12">
+		<h2 id="projects" class="text-3xl font-bold font-heading mb-6">What I've been up to:</h2>
+		<div class="flex flex-wrap justify-center items-start gap-8 w-fit">
+			{#each posts as post (post.slug)}
+				<PostCard {post} />
+			{/each}
+			<!-- Filler elements to left-align the last row -->
+			<div class="invisible h-0 max-w-xs w-full"></div>
+			<div class="invisible h-0 max-w-xs w-full"></div>
+			<div class="invisible h-0 max-w-xs w-full"></div>
+		</div>
+	</section>
 </main>
 
 <Footer>
