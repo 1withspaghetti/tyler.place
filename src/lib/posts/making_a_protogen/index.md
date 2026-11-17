@@ -25,11 +25,29 @@ coverAlt: 'tyler wearing a gray furry helmet with a blue LED face on the visor'
     import first_panel_test_lqip from "./first_panel_test.jpg?lqip"
     import panel_inside_frame from "./panel_inside_frame.jpg?post-image&as=picture"
     import panel_inside_frame_lqip from "./panel_inside_frame.jpg?lqip"
+
+    import electronics from "./electronics.jpg?post-image&as=picture"
+    import electronics_lqip from "./electronics.jpg?lqip"
+
+    import electronics_mounting from "./electronics_mounting.jpg?post-image&as=picture"
+    import electronics_mounting_lqip from "./electronics_mounting.jpg?lqip"
+    import electronics_inner_mounting from "./electronics_inner_mounting.jpg?post-image&as=picture"
+    import electronics_inner_mounting_lqip from "./electronics_inner_mounting.jpg?lqip"
+
+    import cutting_fur from "./cutting_fur.jpg?post-image&as=picture"
+    import cutting_fur_lqip from "./cutting_fur.jpg?lqip"
+
+    import inside_out_ears from "./inside_out_ears.jpg?post-image&as=picture"
+    import inside_out_ears_lqip from "./inside_out_ears.jpg?lqip"
+    import fur_base from "./fur_base.jpg?post-image&as=picture"
+    import fur_base_lqip from "./fur_base.jpg?lqip"
+
+    import version_1 from "./version_1.jpg?post-image&as=picture"
+    import version_1_lqip from "./version_1.jpg?lqip"
+
 </script>
 
 Cover photo by [ErisAiko](https://www.instagram.com/ErisAikoFox).
-
----
 
 Lets set the scene, its Summer of 2023, and I'm about to start my junior year of high school. I had taken an interest in the [furry community](https://en.wikipedia.org/wiki/Furry_fandom) and cosplay, specifically protogen characters. A protogen is a fictional cyborg species with traits such as a rounded visor with a digital face, armor-like body panels, and overall mammal-like furry body.
 
@@ -56,3 +74,35 @@ I had already owned a large flexible neopixel matrix from previous shenanigans, 
     <PostImage src={first_panel_test} lqip={first_panel_test_lqip} />
     <PostImage src={panel_inside_frame} lqip={panel_inside_frame_lqip} />
 </div>
+
+For a microcontroller, I used an [Arduino Nano Every](https://docs.arduino.cc/hardware/nano-every/), a small board that I already owned and had all the functionality I needed. I controlled the Neo Matrix panels, took input from a key job and receiver, read the temp using a sensor from a kit, and displayed the current status on a tiny OLED screen. The mouth was audio-reactive using a microphone, and different expressions could be selected using the remote.
+
+<PostImage src={electronics} lqip={electronics_lqip} />
+
+As for mounting, I glued everything to the bottom of the visor bar, with the LED panels directly attached to the screen. I didn't know how to solder at this point, so it was just the breadboard right on the inside. Not the best setup, but it will be vastly improved upon later.
+
+<div class="flex flex-row gap-4">
+    <PostImage src={electronics_mounting} lqip={electronics_mounting_lqip} />
+    <PostImage src={electronics_inner_mounting} lqip={electronics_inner_mounting_lqip} />
+</div>
+
+## Adding Fur
+
+I didn't have much experience with sewing before, much less with fur, but the cosplay required it. This stage was definitely one of the biggest learning moments, I even reached out for help from my mother's friends who were more experienced.
+
+<PostImage src={cutting_fur} lqip={cutting_fur_lqip} />
+
+The plan was to cover the head with artificial gray fur, sculpt ears out of foam, and bring it all together. This was definitely the most difficult part of the project, and I had to re-do it multiple times. Even using a duct tape base, it was vert difficult to get fur to fit onto such a round object.
+
+<div class="flex flex-row gap-4">
+    <PostImage src={inside_out_ears} lqip={inside_out_ears_lqip} />
+    <PostImage src={fur_base} lqip={fur_base_lqip} />
+</div>
+
+## Version 1.0
+
+At this point it was mid-December, nearly 4 months after I had started. The fur was hot-glued on, the electronics were mounted, the code was uploaded, and I had myself a working version of the protogen head, just in time for a cosplay convention to be held in my home city.
+
+<PostImage src={version_1} lqip={version_1_lqip} />
+
+While this process was incredibly fun, and wearing it to the convention even more fun, there was still a lot of room for improvements to make it stronger, more reliable, and better-looking.
