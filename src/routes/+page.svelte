@@ -9,7 +9,9 @@
 	import PostCard from '@/components/PostCard.svelte';
 	import Footer from '@/components/Footer.svelte';
 
-	const titleTranslate = $derived(Math.min(scrollY.current || 0, 500) / 10);
+	const titleTranslate = $derived(Math.min(scrollY.current || 0, 1000) / 5);
+
+	const mountainTranslate = $derived(Math.min(scrollY.current || 0, 1000) / 8);
 
 	const { data }: PageProps = $props();
 	const posts = $derived(data.posts);
@@ -19,10 +21,11 @@
 
 <main class="w-full min-h-screen">
 	<div class="relative mx-auto mb-8">
-		<HeroImage class="max-w-[1920px] w-full" />
+		<HeroImage class="max-w-[1920px] w-full overflow-hidden" style="object-position: 50% calc(50% + {mountainTranslate}px)" />
 		<div
 			class="absolute top-0 left-0 w-full h-full mask-center mask-contain"
 			style:mask-image="url('{mask_base64}')"
+			style:mask-position="50% calc(50% + {mountainTranslate}px)"
 		>
 			<div
 				class="absolute bottom-[51%] sm:bottom-[50%] xl:bottom-[49%] text-center w-full"
