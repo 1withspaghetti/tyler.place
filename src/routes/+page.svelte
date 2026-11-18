@@ -71,7 +71,7 @@
 					>internal website</a
 				>
 				for University of Washington Astronomy, and cosplay with a
-				<a href={resolve('/post/making_a_protogen')} target="_blank">self-made protogen head</a>.
+				<a href={resolve('/post/making_a_protogen')} target="_blank" class="underline">self-made protogen head</a>.
 			</p>
 			<p class="mb-6">
 				Check out my <a href="https://github.com/1withspaghetti" target="_blank" class="underline"
