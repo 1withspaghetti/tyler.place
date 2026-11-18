@@ -69,7 +69,7 @@
 		<Separator class="my-8" />
 	{/if}
 
-	<div class="prose prose-base lg:prose-lg dark:prose-invert prose-headings:font-heading">
+	<div class="mx-auto prose prose-base lg:prose-lg dark:prose-invert prose-headings:font-heading">
 		<Content />
 	</div>
 </article>

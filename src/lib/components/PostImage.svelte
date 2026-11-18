@@ -20,6 +20,7 @@
 		src={src.img.src}
 		width={src.img.w}
 		height={src.img.h}
+		loading="lazy"
 		style:background-image={lqip ? `url('${lqip.lqip}')` : undefined}
 		style:background-size="cover"
 		style:font-size="0"
