@@ -8,6 +8,7 @@
 	import type { PageProps } from './$types';
 	import PostCard from '@/components/PostCard.svelte';
 	import Footer from '@/components/Footer.svelte';
+	import { resolve } from '$app/paths';
 
 	const titleTranslate = $derived(Math.min(scrollY.current || 0, 1000) / 5);
 
@@ -58,7 +59,7 @@
 				I love building embedded systems, designing data pipelines, and engineering scalable backend logic. 
 				I've help build <a href="https://sites.google.com/view/calpolysupermileage/home" target="_blank" class="underline">hyper-efficient vehicles</a>, 
 				run an <a href="https://github.com/1withspaghetti/AstroConnect" target="_blank" class="underline">internal website</a> for University of Washington Astronomy,
-				and cosplay with a self-made protogen head.
+				and cosplay with a <a href={resolve('/post/making_a_protogen')} target="_blank">self-made protogen head</a>.
 			</p>
 			<p class="mb-6">
 				Check out my <a

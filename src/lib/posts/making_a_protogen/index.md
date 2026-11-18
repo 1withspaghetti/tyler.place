@@ -1,15 +1,17 @@
 ---
 title: 'Making a Protogen Cosplay'
 desc: 'The story of how I designed, programmed, manufactured, and iterated upon a custom electronic cosplay'
-date: '11-16-2026'
+date: '01-04-2025'
+edited: '11-17-2026'
 
 coverAlt: 'tyler wearing a gray furry helmet with a blue LED face on the visor'
 ---
 
 <!-- svelte-ignore script_context_deprecated -->
 <script lang="ts" context="module">
-    export { default as cover } from "./cover.jpg?post-cover&as=picture"
-    export { default as lqip } from "./cover.jpg?lqip"
+    import cover from "./cover.jpg?post-cover&as=picture"
+    import lqip from "./cover.jpg?lqip"
+    export { cover, lqip }
 
     import PostImage from "$lib/components/PostImage.svelte"
 
@@ -45,6 +47,19 @@ coverAlt: 'tyler wearing a gray furry helmet with a blue LED face on the visor'
     import version_1 from "./version_1.jpg?post-image&as=picture"
     import version_1_lqip from "./version_1.jpg?lqip"
 
+    import new_electronics from "./new_electronics.jpg?post-image&as=picture"
+    import new_electronics_lqip from "./new_electronics.jpg?lqip"
+
+    import render_test_mp4 from "./render_test.mp4"
+    import render_test_webm from "./render_test.webm"
+
+    import more_fur_base from "./more_fur_base.jpg?post-image&as=picture"
+    import more_fur_base_lqip from "./more_fur_base.jpg?lqip"
+    import more_fur from "./more_fur.jpg?post-image&as=picture"
+    import more_fur_lqip from "./more_fur.jpg?lqip"
+
+    import glove from "./glove.jpg?post-image&as=picture"
+    import glove_lqip from "./glove.jpg?lqip"
 </script>
 
 Cover photo by [ErisAiko](https://www.instagram.com/ErisAikoFox).
@@ -106,3 +121,54 @@ At this point it was mid-December, nearly 4 months after I had started. The fur 
 <PostImage src={version_1} lqip={version_1_lqip} />
 
 While this process was incredibly fun, and wearing it to the convention even more fun, there was still a lot of room for improvements to make it stronger, more reliable, and better-looking.
+
+## Improved Electronics
+
+My immediate goal was to actually overhaul the electronics. I switched out the microcontroller for a much more powerful esp32-based board. As part of this, I now needed a logic level converter for the esp32 3.3v to work with the 5v LED panels. Additionally, I removed the not so useful temperature sensor as well to save on space. This led me to a much cleaner and more permanent setup.
+
+<PostImage src={new_electronics} lqip={new_electronics_lqip} />
+
+## Better Visuals
+
+Alongside the electronics upgrade came a massive software one. Previously, all the faces had been static bitmap images for different expressions and mouth sizes when talking. With the greater computational power that came with the Nano esp32, I set out on a journey of crude graphics rendering.
+
+The idea was to render a different polygons drown by various points to render different eye and mouth shapes. And with a low pixel-density display, individual LEDs could be dimmed when they were only partially within each polygon. Different faces and mouth movement could then smoothly morph into each other and appear a lot more natural.
+
+<video width="1280" height="720" loading="lazy" controls class="w-full h-auto">
+    <source src={render_test_webm} type="video/webm">
+    <source src={render_test_mp4} type="video/mp4">
+    Your browser does not support HTML video. <a href={render_test_mp4} target="_blank">Download Here</a>.
+</video>
+
+The code is located in this [GitHub Repository](https://github.com/1withspaghetti/SpagProtogenVisor).
+
+## More fur!
+
+Another step was to re-do the sewing with all my gained knowledge, with the fur also going down my neck to look better with the rest of the outfit. 
+
+<div class="flex flex-row gap-4">
+    <PostImage src={more_fur_base} lqip={more_fur_base_lqip} />
+    <PostImage src={more_fur} lqip={more_fur_lqip} />
+</div>
+
+## Replacing the remote
+
+During all this, I was also working on a much more cooler way of controlling the expressions on the protogen with a friend. The idea sparked from VR controllers, where your finger movements could control various aspects of your character in some games. The only issue, is that it would be very difficult to hold a controller all the time.
+
+Instead we could use a [flex sensor](https://www.adafruit.com/product/1070) along the fingers, where variable resistance could be detected by another microcontroller and relayed back up to the head.
+
+<PostImage src={glove} lqip={glove_lqip} />
+
+Using a tiny battery-powered Xiao ESP32, we could read the state of the fingers and send that data to the head using Bluetooth LE. The status screen inside the head displayed the connection status, battery percent, and what fingers were held down. It also showed a menu that could be navigated using the finger presses (or using the remote as a backup).
+
+This process and code can be found in greater detail on the [GitHub repository](https://github.com/williamdelsea/Protogen-Flex-Glove).
+
+## Version 2.0
+
+Finished just at the end of 2024, this is where the project current stands, I'm so happy with how everything turned out, and continue to use it at various conventions and cosplay meetups. While not perfect, I learned so much on the journey from sewing to soldering to computer graphics.
+
+<PostImage src={cover} lqip={lqip} />
+
+## Version 3.0 ..?
+
+I would love to improve this even more, focusing on weight and a better screen system. Unfortunately this would be very costly and require me to rebuild almost everything, including the frame, from scratch. This is definitely a huge project for when I have more time on my hands, but it will not be forgotten!
