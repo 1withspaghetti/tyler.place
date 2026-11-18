@@ -34,7 +34,7 @@
 		article: {
 			author: ['Tyler Place'],
 			published_time: post.date ? new Date(post.date).toISOString() : undefined,
-			modified_time: post.edited ? new Date(post.edited).toISOString() : undefined,
+			modified_time: post.edited ? new Date(post.edited).toISOString() : undefined
 		}
 	}}
 />

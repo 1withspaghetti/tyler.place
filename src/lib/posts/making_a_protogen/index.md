@@ -144,7 +144,7 @@ The code is located in this [GitHub Repository](https://github.com/1withspaghett
 
 ## More fur!
 
-Another step was to re-do the sewing with all my gained knowledge, with the fur also going down my neck to look better with the rest of the outfit. 
+Another step was to re-do the sewing with all my gained knowledge, with the fur also going down my neck to look better with the rest of the outfit.
 
 <div class="flex flex-row gap-4">
     <PostImage src={more_fur_base} lqip={more_fur_base_lqip} />

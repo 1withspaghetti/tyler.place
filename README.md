@@ -1,5 +1,7 @@
 # tyler.place
+
 #### https://tyler.place
+
 ---
 
 Personal static personal website.

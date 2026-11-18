@@ -22,7 +22,10 @@
 
 <main class="w-full min-h-screen">
 	<div class="relative mx-auto mb-8">
-		<HeroImage class="max-w-[1920px] w-full overflow-hidden" style="object-position: 50% calc(50% + {mountainTranslate}px)" />
+		<HeroImage
+			class="max-w-[1920px] w-full overflow-hidden"
+			style="object-position: 50% calc(50% + {mountainTranslate}px)"
+		/>
 		<div
 			class="absolute top-0 left-0 w-full h-full mask-center mask-contain"
 			style:mask-image="url('{mask_base64}')"
@@ -44,7 +47,9 @@
 			<ShareBar class="text-background dark:text-foreground" />
 		</div>
 	</div>
-	<section class="p-8 max-w-4xl mx-auto flex flex-col-reverse md:flex-row items-center justify-center gap-12 mb-12">
+	<section
+		class="p-8 max-w-4xl mx-auto flex flex-col-reverse md:flex-row items-center justify-center gap-12 mb-12"
+	>
 		<div>
 			<LogoFactory class="size-80" />
 		</div>
@@ -56,21 +61,25 @@
 				in SLO!
 			</p>
 			<p class="mb-6">
-				I love building embedded systems, designing data pipelines, and engineering scalable backend logic. 
-				I've help build <a href="https://sites.google.com/view/calpolysupermileage/home" target="_blank" class="underline">hyper-efficient vehicles</a>, 
-				run an <a href="https://github.com/1withspaghetti/AstroConnect" target="_blank" class="underline">internal website</a> for University of Washington Astronomy,
-				and cosplay with a <a href={resolve('/post/making_a_protogen')} target="_blank">self-made protogen head</a>.
+				I love building embedded systems, designing data pipelines, and engineering scalable backend
+				logic. I've help build <a
+					href="https://sites.google.com/view/calpolysupermileage/home"
+					target="_blank"
+					class="underline">hyper-efficient vehicles</a
+				>, run an
+				<a href="https://github.com/1withspaghetti/AstroConnect" target="_blank" class="underline"
+					>internal website</a
+				>
+				for University of Washington Astronomy, and cosplay with a
+				<a href={resolve('/post/making_a_protogen')} target="_blank">self-made protogen head</a>.
 			</p>
 			<p class="mb-6">
-				Check out my <a
-					href="https://github.com/1withspaghetti"
-					target="_blank"
-					class="underline">GitHub</a
+				Check out my <a href="https://github.com/1withspaghetti" target="_blank" class="underline"
+					>GitHub</a
 				>
 				or
-				<a href="mailto:tylerlplace@gmail.com" target="_blank" class="underline"
-					>email me</a
-				> if you want to chat!
+				<a href="mailto:tylerlplace@gmail.com" target="_blank" class="underline">email me</a> if you want
+				to chat!
 			</p>
 			<p class="text-center">&lt;3</p>
 		</div>
