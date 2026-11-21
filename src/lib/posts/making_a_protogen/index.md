@@ -1,8 +1,8 @@
 ---
 title: 'Making a Protogen Cosplay'
 desc: 'The story of how I designed, programmed, manufactured, and iterated upon a custom electronic cosplay'
-date: '01-04-2025'
-edited: '11-17-2026'
+date: '2025-01-04'
+edited: '2026-11-17'
 
 coverAlt: 'tyler wearing a gray furry helmet with a blue LED face on the visor'
 ---

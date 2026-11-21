@@ -1,7 +1,7 @@
 ---
 title: 'This is a Template'
 desc: 'Short description that gives a bit more info'
-date: '09-02-2026'
+date: '2027-01-01'
 
 coverAlt: 'abstract geometric white wall'
 
